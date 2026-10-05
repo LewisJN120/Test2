@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+</helmet>
+<section data-screen-label="Page heading" style="padding: clamp(40px, 4vw, 84px) clamp(20px, 4.8vw, 100px) clamp(64px, 6vw, 125px) clamp(20px, 4.8vw, 100px); background: #000; color: #fff; font-family: Inter, sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; padding-bottom: clamp(18px, 1.6vw, 34px); border-bottom: 1px solid rgb(140,140,140);">
+    <h1 style="margin: 0; font-family: 'Arizona Flare', serif; font-weight: 400; font-size: clamp(64px, 8.6vw, 137.6px); line-height: .8; text-transform: uppercase;">{{ heading }}</h1>
+    <div ref="{{ menuRef }}" style="position: relative; z-index: 5;">
+      <button onClick="{{ toggleMenu }}" aria-haspopup="listbox" aria-expanded="{{ open }}" style="display: flex; align-items: center; gap: clamp(12px, 1vw, 20px); padding: 6px 0; border: 0; background: transparent; color: #fff; font-family: Inter, sans-serif; font-weight: 400; font-size: clamp(15px, 1.06vw, 17px); line-height: 1.35; cursor: pointer;">
+        <span>{{ sortLabel }}</span>
+        <svg viewBox="0 0 34 20" style="width: clamp(16px, 1.1vw, 23px); height: auto; transform: rotate({{ chevron }}); transition: transform .25s ease;"><path d="M1.5 1.5 L17 17.5 L32.5 1.5" fill="none" stroke="#fff" stroke-width="2.4"></path></svg>
+      </button>
+      <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+        <div role="listbox" style="position: absolute; right: 0; top: calc(100% + 12px); min-width: 220px; display: flex; flex-direction: column; padding: 8px 0; background: #000; border: 1px solid rgb(140,140,140);">
+          <sc-for list="{{ sortOptions }}" as="o" hint-placeholder-count="3">
+            <button role="option" onClick="{{ o.pick }}" style="padding: 10px 20px; border: 0; background: transparent; color: #fff; text-align: left; font-family: Inter, sans-serif; font-weight: {{ o.weight }}; font-size: clamp(15px, 1.06vw, 17px); line-height: 1.35; cursor: pointer;" style-hover="background: rgb(26,26,26);">{{ o.label }}</button>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+  <sc-if value="{{ hasDesc }}" hint-placeholder-val="{{ true }}">
+    <p style="margin: clamp(20px, 1.9vw, 40px) 0 0; max-width: 1500px; font-size: clamp(15px, 1vw, 16px); line-height: 1.35; text-wrap: pretty;">{{ description }}</p>
+  </sc-if>
+</section>
+<section style="margin: 0 clamp(20px, 4.8vw, 100px); display: grid; grid-template-columns: repeat(auto-fill, minmax(max(30%, min(100%, 340px)), 1fr)); background: #000;">
+  <sc-for list="{{ shows }}" as="s" hint-placeholder-count="6">
+    <a href="{{ s.href }}" onMouseEnter="{{ s.enter }}" onMouseLeave="{{ s.leave }}" style="position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; background: rgb(17,17,17); color: #fff;" style-hover="opacity: 1; color: #fff;">
+      <div style="position: absolute; inset: 0; filter: grayscale({{ s.gray }}); transition: filter .35s ease;"><image-slot id="{{ s.slot }}" shape="rect" src="{{ s.img }}" placeholder="Show image"></image-slot></div>
+      <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.25) 30%, rgba(0,0,0,0) 55%);"></div>
+      <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.75) 45%, rgba(0,0,0,.55) 100%); opacity: {{ s.dark }}; transition: opacity .35s ease;"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 24px clamp(20px, 2vw, 42px); text-align: center; color: #fff; z-index: 1; opacity: {{ s.op }}; transition: opacity .35s ease;">
+        <div style="font-family: 'Arizona Flare', serif; font-size: clamp(22px, 1.9vw, 30.4px); line-height: 1; text-transform: uppercase; text-wrap: balance;">{{ s.title }}</div>
+        <sc-if value="{{ s.hasSub }}" hint-placeholder-val="{{ false }}">
+          <div style="font-family: Inter, sans-serif; font-weight: 500; font-size: clamp(12px, .85vw, 13.6px); line-height: 1.2; text-transform: uppercase; letter-spacing: .02em;">{{ s.sub }}</div>
+        </sc-if>
+      </div>
+    </a>
+  </sc-for>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 900}, &quot;page&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;theatre&quot;, &quot;screen&quot;], &quot;default&quot;: &quot;theatre&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;heading&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;description&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Simon is an experienced orchestrator and MIDI programmer based in London. Since graduating from Cambridge University with a PhD in Physics in 2015 Simon has dedicated himself to crafting a career as an orchestrator, with credits in musical theatre, concert hall and on film and television. Simon has shown himself to be adept at working across genres, delivering a consistently high level of work.&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;alwaysShowText&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { hover: -1, data: null, sort: 'filter', open: false };
+  menuRef = React.createRef();
+  componentDidMount() {
+    fetch('projects.json').then(r => r.json()).then(data => this.setState({ data })).catch(() => {});
+    this.onDoc = e => { if (this.state.open && this.menuRef.current && !this.menuRef.current.contains(e.target)) this.setState({ open: false }); };
+    document.addEventListener('click', this.onDoc);
+  }
+  componentWillUnmount() { document.removeEventListener('click', this.onDoc); }
+  year(p) {
+    if (p.year) return p.year;
+    const ys = (p.venue || '').match(/\b(19|20)\d{2}\b/g);
+    return ys ? Math.max(...ys.map(Number)) : Infinity;
+  }
+  renderVals() {
+    const page = this.props.page || 'theatre';
+    const always = this.props.alwaysShowText ?? true;
+    const base = (this.state.data && this.state.data[page]) || [];
+    const sort = this.state.sort;
+    const key = t => t.replace(/^[#\s]+/, '').replace(/^(the|a)\s+/i, '');
+    let list = base.slice();
+    if (sort === 'alpha') list.sort((a, b) => key(a.title).localeCompare(key(b.title)));
+    if (sort === 'recent') list = list.map((p, i) => [p, i]).sort((a, b) => (this.year(b[0]) - this.year(a[0])) || (a[1] - b[1])).map(x => x[0]);
+    const labels = { filter: 'Filter', alpha: 'Alphabetical', recent: 'Recent' };
+    const page2 = page.charAt(0).toUpperCase() + page.slice(1);
+    const description = this.props.description ?? 'Simon is an experienced orchestrator and MIDI programmer based in London. Since graduating from Cambridge University with a PhD in Physics in 2015 Simon has dedicated himself to crafting a career as an orchestrator, with credits in musical theatre, concert hall and on film and television. Simon has shown himself to be adept at working across genres, delivering a consistently high level of work.';
+    return {
+      heading: this.props.heading || page2,
+      description, hasDesc: !!description,
+      menuRef: this.menuRef,
+      open: this.state.open,
+      chevron: this.state.open ? '180deg' : '0deg',
+      sortLabel: labels[sort],
+      toggleMenu: () => this.setState(s => ({ open: !s.open })),
+      sortOptions: Object.keys(labels).map(k => ({
+        label: labels[k], weight: k === sort ? 600 : 400,
+        pick: () => this.setState({ sort: k, open: false, hover: -1 })
+      })),
+      shows: list.map((p, i) => {
+        const on = this.state.hover === i;
+        const m = p.yt && p.yt.match(/[?&]v=([^&]+)/);
+        return {
+          title: p.title, sub: p.sub || '', hasSub: !!p.sub,
+          href: 'Project.dc.html?id=' + p.id,
+          slot: 'show-' + p.id,
+          img: p.img || (m ? 'https://i.ytimg.com/vi/' + m[1] + '/hqdefault.jpg' : 'assets/show-placeholder.jpg'),
+          dark: on ? 1 : 0,
+          gray: on ? 1 : 0,
+          op: always || on ? 1 : 0,
+          enter: () => this.setState({ hover: i }),
+          leave: () => this.setState(s => (s.hover === i ? { hover: -1 } : null))
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

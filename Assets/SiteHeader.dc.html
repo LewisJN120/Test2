@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<header style="position: relative; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 24px 48px; padding: clamp(20px, 2.35vw, 49px) {{ padR }} clamp(20px, 2.35vw, 49px) {{ padL }}; background: transparent; color: {{ fg }}; font-family: Inter, sans-serif;">
+  <a href="Simon%20Nathan%20Home.dc.html" style="display: flex; flex-direction: column; gap: clamp(8px, .8vw, 16px); color: {{ fg }};">
+    <span style="font-family: 'Arizona Flare', serif; font-weight: 400; font-size: {{ logoSize }}; line-height: .853; white-space: nowrap;">SIMON NATHAN</span>
+  </a>
+  <nav style="display: flex; flex-wrap: wrap; gap: clamp(12px, 1.2vw, 20px) clamp(18px, 2.2vw, 40px); padding-top: clamp(4px, .6vw, 12px); font-weight: 500; font-size: clamp(14px, 1vw, 16px); line-height: 1;">
+    <a href="Listen.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dListen }};">Listen</a>
+    <a href="Theatre.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dTheatre }};">Theatre</a>
+    <a href="Screen.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dScreen }};">Screen</a>
+    <a href="Concerts.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dConcerts }};">Concerts</a>
+    <a href="Contact.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dContact }};">Contact</a>
+  </nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 200}, &quot;current&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;listen&quot;, &quot;theatre&quot;, &quot;screen&quot;, &quot;concerts&quot;, &quot;contact&quot;, &quot;&quot;], &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const light = this.props.light ?? false;
+    const fg = light ? '#000' : '#fff', bg = light ? '#fff' : '#000';
+    const c = this.props.current || '';
+    const d = k => (k === c ? 'underline' : 'none');
+    const home = this.props.home ?? false;
+    const inset = this.props.inset;
+    return { fg, bg, padL: inset || 'clamp(20px, 4.8vw, 76.8px)', padR: inset || 'clamp(20px, 4.8vw, 76.8px)', logoSize: home ? 'clamp(40px, 5.97vw, 95.5px)' : 'clamp(28px, 2.985vw, 47.8px)', dListen: d('listen'), dTheatre: d('theatre'), dScreen: d('screen'), dConcerts: d('concerts'), dContact: d('contact') };
+  }
+}
+</script>
+</body>
+</html>
