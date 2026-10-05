@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preload" href="uploads/ABCArizonaFlareStandardVariable-Trial.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
+<style>
+@font-face { font-family: "Arizona Flare"; src: url("uploads/ABCArizonaFlareStandardVariable-Trial.ttf") format("truetype"); font-weight: 100 900; font-display: block; }
+html, body { margin: 0; padding: 0; background: #000; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #fff; text-decoration: none; }
+a:hover { color: #fff; opacity: .7; }
+</style>
+</helmet>
+<main style="font-family: Inter, sans-serif; color: #fff; background: #000;">
+  <section data-screen-label="Concerts hero" style="position: relative; height: clamp(520px, 78vh, 980px); overflow: hidden; background: #000;">
+    <div style="position: absolute; inset: 0; background: url(assets/hero.jpg) 62% 35% / cover no-repeat;"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,.75) 100%);"></div>
+    <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 2;">
+      <dc-import name="SiteHeader" current="concerts" hint-size="100%,200px"></dc-import>
+    </div>
+    <div style="position: absolute; left: clamp(20px, 4.8vw, 100px); right: clamp(20px, 4.8vw, 100px); bottom: clamp(32px, 3.4vw, 70px);">
+      <h1 style="margin: 0; font-family: 'Arizona Flare', serif; font-weight: 400; font-size: clamp(64px, 9vw, 144px); line-height: .9; text-transform: uppercase;">Concerts</h1>
+    </div>
+  </section>
+  <section data-screen-label="Orchestras" style="padding: clamp(56px, 5.3vw, 110px) clamp(20px, 4.8vw, 100px) clamp(80px, 7vw, 146px);">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-bottom: 1px solid rgb(140,140,140);">
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">John Wilson Orchestra/Sinfonia of London</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">Lucerne Festival Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">Deutsches Symphonie-Orchester Berlin</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">BBC Symphony Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">BBC Concert Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">BBC National Orchestra of Wales</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">Hallé Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">Mulhouse Symphony Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">Aalborg Symphony Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">London Musical Theatre Orchestra</li>
+      <li style="padding: clamp(18px, 1.5vw, 30px) 0; border-top: 1px solid rgb(140,140,140); font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase;">London Gay Men's Chorus</li>
+    </ul>
+  </section>
+  <dc-import name="SiteFooter" hint-size="100%,480px"></dc-import>
+</main>
+</x-dc>
+</body>
+</html>
