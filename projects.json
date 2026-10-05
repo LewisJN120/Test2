@@ -1,0 +1,315 @@
+{
+  "theatre": [
+    {
+      "id": "a-christmas-carol",
+      "title": "A Christmas Carol",
+      "venue": "Dominion Theatre (2020)",
+      "credits": [
+        "Music by Alan Menken",
+        "Lyrics by Lynn Ahrens",
+        "Additional new orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=K98zOfKaUds",
+      "img": "assets/theatre/a-christmas-carol.jpg"
+    },
+    {
+      "id": "camelot",
+      "title": "Camelot",
+      "venue": "A new version in development, commissioned by the Frederick Loewe Foundation",
+      "credits": [
+        "Music by Lerner & Loewe",
+        "Orchestrations by Simon Nathan"
+      ],
+      "img": "assets/theatre/camelot.jpg"
+    },
+    {
+      "id": "stiletto",
+      "title": "Stiletto",
+      "venue": "Charing Cross Theatre (2025), Original West End Cast Recording (2026)",
+      "credits": [
+        "Music by Matthew Wilder (of Disney's Mulan)",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=cj6MEReoyjo",
+      "img": "assets/theatre/stiletto.png"
+    },
+    {
+      "id": "my-sons-a-queer",
+      "title": "My Son's A Queer",
+      "sub": "(But What Can You Do?)",
+      "venue": "Turbine Theatre (2021) - Edinburgh Fringe (2022) - Garrick Theatre (2022), Ambassadors Theatre (2023) , West End - UK Tour (2024), New York City Centre (2025)",
+      "credits": [
+        "Music and lyrics by Pippa Cleary",
+        "Book and lyrics by Rob Madge",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=hbheaNH44eE&t=12s",
+      "img": "assets/show-placeholder.jpg"
+    },
+    {
+      "id": "paddington",
+      "title": "Paddington the Musical",
+      "sub": "Royal Variety Performance",
+      "venue": "Royal Variety Performance, Royal Albert Hall (2025)",
+      "credits": [
+        "Music and lyrics by Tom Fletcher",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=qB13h724-a8",
+      "img": "assets/theatre/paddington.jpg"
+    },
+    {
+      "id": "a-christmas-carol-ish",
+      "title": "A Christmas Carol(ish)",
+      "venue": "@sohoplace (2024)",
+      "credits": [
+        "Book & Lyrics by Nick Mohammed (double Emmy-award nominee)",
+        "Music by Oliver Birch",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=dbGPpGrh-Cc",
+      "img": "assets/theatre/a-christmas-carol-ish.jpg"
+    },
+    {
+      "id": "snow-white-and-me",
+      "title": "Snow White and Me",
+      "venue": "Original Cast Recording (2026)",
+      "credits": [
+        "Music and lyrics by Pippa Cleary",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=4pojhTEhMa4",
+      "img": "assets/gallery-3.jpg"
+    },
+    {
+      "id": "once-on-this-island",
+      "title": "Once On This Island",
+      "sub": "in Concert",
+      "venue": "Theatre Royal Drury Lane (2026)",
+      "credits": [
+        "Music by Stephen Flaherty",
+        "Book and lyrics by Lynn Ahrens",
+        "New orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=-QDXHFgeSF0",
+      "img": "assets/theatre/once-on-this-island.jpg"
+    },
+    {
+      "id": "pippin",
+      "title": "Pippin",
+      "sub": "50th Anniversary Concert",
+      "venue": "Theatre Royal Drury Lane (2024)",
+      "credits": [
+        "Music and lyrics by Stephen Schwartz",
+        "Expanded orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=0fkyx6wmoZ0&t=9s",
+      "img": "assets/theatre/pippin.webp"
+    },
+    {
+      "id": "honeymoon-in-vegas",
+      "title": "Honeymoon In Vegas",
+      "sub": "The Musical in Concert",
+      "venue": "London Palladium (2017)",
+      "credits": [
+        "Music and lyrics by Jason Robert Brown",
+        "Expanded orchestrations by Simon Nathan"
+      ],
+      "img": "assets/theatre/honeymoon-in-vegas.jpg"
+    },
+    {
+      "id": "treason",
+      "title": "Treason",
+      "sub": "The Musical in Concert",
+      "venue": "Theatre Royal Drury Lane (2022)",
+      "credits": [
+        "Music and lyrics by Ricky Allan",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=gx4xrhJeLtM",
+      "img": "assets/theatre/treason.jpg"
+    },
+    {
+      "id": "girlfriends",
+      "title": "Girlfriends",
+      "sub": "in Concert",
+      "venue": "Bishopsgate Institute (2018)",
+      "credits": [
+        "Music and lyrics by Howard Goodall",
+        "Orchestrations by Simon Nathan"
+      ],
+      "img": "assets/theatre/girlfriends.jpg"
+    },
+    {
+      "id": "king",
+      "title": "King",
+      "sub": "in Concert",
+      "venue": "Hackney Empire (2018)",
+      "credits": [
+        "Music and lyrics Martin Smith",
+        "New orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=gTF9uRZFeDE",
+      "img": "assets/theatre/king.jpg"
+    },
+    {
+      "id": "zoologicalsociety",
+      "title": "#Zoologicalsociety",
+      "venue": "Royal & Derngate (2020)",
+      "credits": [
+        "Music and lyrics Vikki Stone",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=saaAbh4Gxb4",
+      "img": "assets/theatre/zoologicalsociety.png"
+    }
+  ],
+  "screen": [
+    {
+      "id": "emilia-perez",
+      "title": "Emilia Pérez",
+      "sub": "Netflix",
+      "credits": [
+        "Music by Clément Ducol & Camille Dalmais",
+        "Orchestrations by Simon Nathan"
+      ],
+      "note": "\"El Mal\" won the 2025 Academy Award and Golden Globe for Best Original Song",
+      "yt": "https://www.youtube.com/watch?v=vM-voEepRyI",
+      "img": "assets/screen/emilia-perez.jpg"
+    },
+    {
+      "id": "trap",
+      "title": "Trap",
+      "sub": "Warner Bros.",
+      "credits": [
+        "Music by Herdís Stefánsdóttir",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=hJiPAJKjUVg",
+      "img": "assets/screen/trap.jpg"
+    },
+    {
+      "id": "the-count-of-monte-cristo",
+      "title": "The Count of Monte Cristo",
+      "sub": "Pathé",
+      "credits": [
+        "Music by Jérôme Rebotier",
+        "Orchestrations by Simon Nathan"
+      ],
+      "note": "The Count of Monte Cristo was the highest-budget French film of 2024, and had its world premiere at the 77th Cannes Film Festival",
+      "yt": "https://www.youtube.com/watch?v=8Q6y1waxlTY",
+      "img": "assets/screen/the-count-of-monte-cristo.jpg"
+    },
+    {
+      "id": "miraculous",
+      "title": "Miraculous: Ladybug & Cat Noir, The Movie",
+      "sub": "SND/Netflix",
+      "credits": [
+        "Music by Jeremy Zag",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=3fzFvZToh8o",
+      "img": "assets/screen/miraculous.jpg"
+    },
+    {
+      "id": "kaamelott",
+      "title": "Kaamelott - Deuxième Volet, pt.1 & pt.2",
+      "sub": "SND",
+      "credits": [
+        "Music by Alexandre Astier",
+        "Orchestrations by Simon Nathan"
+      ],
+      "note": "Recorded with the Orchestre National de Lyon",
+      "yt": "https://www.youtube.com/watch?v=RqFytkq8PMY",
+      "img": "assets/screen/kaamelott.jpg"
+    },
+    {
+      "id": "asterix",
+      "title": "Asterix: The Kingdom of Nubia",
+      "sub": "SND",
+      "credits": [
+        "Music by Romain Trouillet",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=OoObyOm2rfI",
+      "img": "assets/screen/asterix.jpg"
+    },
+    {
+      "id": "finding-ohana",
+      "title": "Finding 'Ohana",
+      "sub": "Netflix",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=FTqLUEpWqEc",
+      "img": "assets/screen/finding-ohana.jpg"
+    },
+    {
+      "id": "8-bit-christmas",
+      "title": "8-Bit Christmas",
+      "sub": "HBO",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=CPIcAkLBV-U",
+      "img": "assets/screen/8-bit-christmas.jpg"
+    },
+    {
+      "id": "four-kids-and-it",
+      "title": "Four Kids and It",
+      "sub": "Sky Cinema",
+      "credits": [
+        "Music by Anne Nikitin",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=ZK1tAw4uaQE",
+      "img": "assets/screen/four-kids-and-it.png"
+    },
+    {
+      "id": "visions",
+      "title": "Visions",
+      "sub": "SND",
+      "credits": [
+        "Music by Philippe Rombi",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=od-F6W_f4D4",
+      "img": "assets/screen/visions.jpg"
+    },
+    {
+      "id": "shadow-and-bone",
+      "title": "Shadow and Bone",
+      "sub": "Netflix",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=b1WHQTbJ7vE",
+      "img": "assets/screen/shadow-and-bone.jpg"
+    },
+    {
+      "id": "prince-andrew",
+      "title": "Prince Andrew: The Musical",
+      "sub": "Channel 4",
+      "credits": [
+        "Music and lyrics by Kieran Hodgson, Freddie Tapner & Pippa Cleary",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=SePqlPRrJ7s",
+      "img": "assets/screen/prince-andrew.jpg"
+    },
+    {
+      "id": "blacktalon",
+      "title": "Blacktalon",
+      "sub": "Warhammer TV",
+      "credits": [
+        "Music by Jonathan Hartman",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=sqE4XZQxcm4",
+      "img": "assets/screen/blacktalon.jpg"
+    }
+  ]
+}

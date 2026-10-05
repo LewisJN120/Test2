@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preload" href="uploads/ABCArizonaFlareStandardVariable-Trial.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
+<style>
+@font-face { font-family: "Arizona Flare"; src: url("uploads/ABCArizonaFlareStandardVariable-Trial.ttf") format("truetype"); font-weight: 100 900; font-display: block; }
+html, body { margin: 0; padding: 0; background: #000; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #fff; text-decoration: none; }
+a:hover { color: #fff; opacity: .7; }
+</style>
+</helmet>
+<main style="font-family: Inter, sans-serif; color: #fff; background: #000;">
+  <dc-import name="SiteHeader" current="listen" hint-size="100%,200px"></dc-import>
+  <section data-screen-label="Listen intro" style="padding: clamp(40px, 4vw, 84px) clamp(20px, 4.8vw, 100px) clamp(40px, 4vw, 84px);">
+    <h1 style="margin: 0; font-family: 'Arizona Flare', serif; font-weight: 400; font-size: clamp(64px, 9vw, 144px); line-height: .9; text-transform: uppercase;">Listen</h1>
+  </section>
+
+  <section data-screen-label="Playlist" style="padding: 0 clamp(20px, 4.8vw, 100px) clamp(56px, 5.3vw, 110px);">
+    <div style="font-weight: 700; font-size: clamp(16px, 1.6vw, 25.6px); letter-spacing: .02em; margin-bottom: clamp(20px, 2vw, 40px);">PLAYLIST</div>
+    <sc-if value="{{ hasSpotify }}" hint-placeholder-val="{{ false }}">
+      <iframe src="{{ spotifyEmbed }}" title="Spotify playlist" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="display: block; width: 100%; height: 800px; border: 0; border-radius: 12px;"></iframe>
+    </sc-if>
+    <sc-if value="{{ noSpotify }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; align-items: center; justify-content: center; height: 480px; border: 1px dashed rgb(140,140,140); color: rgb(140,140,140); font-size: clamp(14px, .98vw, 15.7px); text-align: center; padding: 24px;">Spotify playlist embed — add the playlist link in Tweaks</div>
+    </sc-if>
+  </section>
+
+  <section data-screen-label="Reel" style="padding: 0 clamp(20px, 4.8vw, 100px) clamp(80px, 7vw, 146px);">
+    <div style="font-weight: 700; font-size: clamp(16px, 1.6vw, 25.6px); letter-spacing: .02em; margin-bottom: clamp(20px, 2vw, 40px);">REEL</div>
+    <div onMouseEnter="{{ showUi }}" onMouseMove="{{ showUi }}" onMouseLeave="{{ hideUi }}" style="position: relative; aspect-ratio: 16 / 9; background: rgb(17,17,17); overflow: hidden;">
+      <sc-if value="{{ hasReel }}" hint-placeholder-val="{{ false }}">
+        <iframe ref="{{ frameRef }}" onLoad="{{ frameLoad }}" src="{{ reelEmbed }}" title="Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+        <a href="{{ watchUrl }}" target="_blank" rel="noopener" aria-label="Watch on YouTube" style="position: absolute; left: 0; right: 0; top: 0; height: 72px; z-index: 1;" style-hover="opacity: 1;"></a>
+        <a href="{{ watchUrl }}" target="_blank" rel="noopener" aria-label="Watch on YouTube" style="position: absolute; right: 0; bottom: 0; width: 160px; height: 64px; z-index: 1;" style-hover="opacity: 1;"></a>
+        <button onClick="{{ toggleSound }}" onMouseEnter="{{ holdUi }}" onMouseLeave="{{ showUi }}" style="position: absolute; right: 20px; bottom: 76px; z-index: 2; opacity: {{ uiOp }}; pointer-events: {{ uiPe }}; transition: opacity .4s ease; display: flex; align-items: center; justify-content: center; height: 44px; padding: 0 22px; border: 0; border-radius: 50px; background: #fff; color: #000; font-family: Inter, sans-serif; font-weight: 500; font-size: 15px; cursor: pointer;">{{ soundLabel }}</button>
+      </sc-if>
+      <sc-if value="{{ noReel }}" hint-placeholder-val="{{ true }}">
+        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border: 1px dashed rgb(140,140,140); color: rgb(140,140,140); font-size: clamp(14px, .98vw, 15.7px); text-align: center; padding: 24px;">YouTube reel — add the video link in Tweaks</div>
+      </sc-if>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,480px"></dc-import>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;spotifyPlaylistUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://open.spotify.com/playlist/2ie0Ww0xpjB5Sw2HmpQ4Zb&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Embeds&quot;}, &quot;youtubeReelUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.youtube.com/watch?v=VoZ13zqhT_w&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Embeds&quot;}}">
+class Component extends DCLogic {
+  state = { unmuted: false, ui: false };
+  frameRef = React.createRef();
+  componentWillUnmount() { clearTimeout(this.uiT); }
+  renderVals() {
+    const sp = (this.props.spotifyPlaylistUrl || 'https://open.spotify.com/playlist/2ie0Ww0xpjB5Sw2HmpQ4Zb').match(/(playlist|album|track|artist)\/([A-Za-z0-9]+)/);
+    const yt = (this.props.youtubeReelUrl || 'https://www.youtube.com/watch?v=VoZ13zqhT_w').match(/(?:[?&]v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{6,})/);
+    return {
+      frameRef: this.frameRef,
+      watchUrl: yt ? 'https://www.youtube.com/watch?v=' + yt[1] : '',
+      frameLoad: () => {
+        const w = this.frameRef.current && this.frameRef.current.contentWindow; if (!w) return;
+        const send = () => {
+          w.postMessage(JSON.stringify({ event: 'listening', id: 1 }), '*');
+          w.postMessage(JSON.stringify({ event: 'command', func: 'unloadModule', args: ['captions'] }), '*');
+          w.postMessage(JSON.stringify({ event: 'command', func: 'unloadModule', args: ['cc'] }), '*');
+        };
+        send(); setTimeout(send, 800); setTimeout(send, 2500);
+      },
+      soundLabel: this.state.unmuted ? 'Mute' : 'Sound on',
+      toggleSound: () => {
+        const w = this.frameRef.current && this.frameRef.current.contentWindow; if (!w) return;
+        const on = !this.state.unmuted;
+        w.postMessage(JSON.stringify({ event: 'command', func: on ? 'unMute' : 'mute', args: [] }), '*');
+        if (on) w.postMessage(JSON.stringify({ event: 'command', func: 'setVolume', args: [100] }), '*');
+        this.setState({ unmuted: on });
+      },
+      uiOp: this.state.ui ? 1 : 0,
+      uiPe: this.state.ui ? 'auto' : 'none',
+      showUi: () => { clearTimeout(this.uiT); if (!this.state.ui) this.setState({ ui: true }); this.uiT = setTimeout(() => this.setState({ ui: false }), 2500); },
+      holdUi: () => { clearTimeout(this.uiT); if (!this.state.ui) this.setState({ ui: true }); },
+      hideUi: () => { clearTimeout(this.uiT); this.setState({ ui: false }); },
+      hasSpotify: !!sp, noSpotify: !sp,
+      spotifyEmbed: sp ? 'https://open.spotify.com/embed/' + sp[1] + '/' + sp[2] + '?theme=0' : '',
+      hasReel: !!yt, noReel: !yt,
+      reelEmbed: yt ? 'https://www.youtube.com/embed/' + yt[1] + '?autoplay=1&mute=1&loop=1&playlist=' + yt[1] + '&enablejsapi=1&cc_load_policy=0&cc_lang_pref=none&hl=en&controls=0&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&origin=' + encodeURIComponent(location.origin) : ''
+    };
+  }
+}
+</script>
+</body>
+</html>
