@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preload" href="uploads/ABCArizonaFlareStandardVariable-Trial.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
+<style>
+@font-face { font-family: "Arizona Flare"; src: url("uploads/ABCArizonaFlareStandardVariable-Trial.ttf") format("truetype"); font-weight: 100 900; font-display: block; }
+html, body { margin: 0; padding: 0; background: #000; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #fff; text-decoration: none; }
+a:hover { color: #fff; opacity: .7; }
+</style>
+</helmet>
+<main style="font-family: Inter, sans-serif; color: #fff; background: #000;">
+  <section data-screen-label="Concerts hero" style="position: relative; height: clamp(520px, 78vh, 980px); overflow: hidden; background: #000;">
+    <div style="position: absolute; inset: 0; background: url(assets/hero.jpg) 62% 35% / cover no-repeat;"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,.75) 100%);"></div>
+    <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 2;">
+      <dc-import name="SiteHeader" current="concerts" overlay="{{ true }}" hint-size="100%,200px"></dc-import>
+    </div>
+    <div style="position: absolute; left: clamp(20px, 4.8vw, 100px); right: clamp(20px, 4.8vw, 100px); bottom: clamp(32px, 3.4vw, 70px);">
+      <h1 style="margin: 0; font-family: 'Arizona Flare', serif; font-weight: 400; font-size: clamp(32px, 4.5vw, 72px); line-height: .9; text-transform: uppercase;">Concerts</h1>
+    </div>
+  </section>
+  <section data-screen-label="Orchestras" style="padding: clamp(56px, 5.3vw, 110px) clamp(20px, 4.8vw, 100px) clamp(20px, 4.8vw, 100px);">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-bottom: 1px solid rgb(140,140,140);">
+      <sc-for list="{{ items }}" as="c" hint-placeholder-count="8">
+        <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 14px clamp(32px, 4vw, 84px); padding: clamp(22px, 1.8vw, 36px) 0; border-top: 1px solid rgb(140,140,140);">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="font-family: 'Arizona Flare', serif; font-size: clamp(24px, 2.4vw, 38.4px); line-height: 1.05; text-transform: uppercase; text-wrap: balance;">{{ c.title }}</div>
+            <sc-if value="{{ c.hasSub }}" hint-placeholder-val="{{ false }}">
+              <div style="font-weight: 500; font-size: clamp(12px, .85vw, 13.6px); text-transform: uppercase; letter-spacing: .02em;">{{ c.sub }}</div>
+            </sc-if>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
+            <p style="margin: 0; font-size: clamp(15px, 1.1vw, 18px); line-height: 1.4; text-wrap: pretty;">{{ c.desc }}</p>
+            <sc-if value="{{ c.hasVideo }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ c.href }}" style="display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px 0 14px; border: 1px solid #fff; border-radius: 50px; color: #fff; font-weight: 500; font-size: 14px; transition: background .25s, color .25s;" style-hover="opacity: 1; background: #fff; color: #000;">
+                <svg viewBox="0 0 12 14" style="width: 10px; height: 12px; display: block;"><path d="M0 0 L12 7 L0 14 Z" fill="currentColor"></path></svg>
+                <span>Watch</span>
+              </a>
+            </sc-if>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </section>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { data: null };
+  componentDidMount() { fetch('projects.json').then(r => r.json()).then(data => this.setState({ data })).catch(() => {}); }
+  renderVals() {
+    const list = (this.state.data && this.state.data.concerts) || [];
+    return {
+      items: list.map(p => ({
+        title: p.title, sub: p.sub || '', hasSub: !!p.sub, desc: p.desc || '',
+        hasVideo: !!p.yt, href: 'Project.dc.html?id=' + p.id
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

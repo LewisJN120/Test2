@@ -1,0 +1,462 @@
+{
+  "theatre": [
+    {
+      "id": "a-christmas-carol",
+      "title": "A Christmas Carol",
+      "venue": "Dominion Theatre (2020)",
+      "credits": [
+        "Music by Alan Menken",
+        "Lyrics by Lynn Ahrens",
+        "Additional new orchestrations by Simon Nathan"
+      ],
+      "img": "assets/theatre/a-christmas-carol.jpg"
+    },
+    {
+      "id": "stiletto",
+      "title": "Stiletto",
+      "venue": "Charing Cross Theatre (2025), Original West End Cast Recording (2026)",
+      "credits": [
+        "Music by Matthew Wilder (of Disney's Mulan)",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=cj6MEReoyjo",
+      "img": "assets/theatre/stiletto-web.jpg"
+    },
+    {
+      "id": "my-sons-a-queer",
+      "title": "My Son's A Queer",
+      "sub": "(But What Can You Do?)",
+      "venue": "Turbine Theatre (2021) - Edinburgh Fringe (2022) - Garrick Theatre (2022), Ambassadors Theatre (2023) , West End - UK Tour (2024), New York City Centre (2025)",
+      "credits": [
+        "Music and lyrics by Pippa Cleary",
+        "Book and lyrics by Rob Madge",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=hbheaNH44eE&t=12s",
+      "img": "assets/show-placeholder.jpg"
+    },
+    {
+      "id": "a-christmas-carol-ish",
+      "title": "A Christmas Carol(ish)",
+      "venue": "@sohoplace (2024)",
+      "credits": [
+        "Book & Lyrics by Nick Mohammed (double Emmy-award nominee)",
+        "Music by Oliver Birch",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=dbGPpGrh-Cc",
+      "img": "assets/theatre/a-christmas-carol-ish.jpg"
+    },
+    {
+      "id": "snow-white-and-me",
+      "title": "Snow White and Me",
+      "venue": "Original Cast Recording (2026)",
+      "credits": [
+        "Music and lyrics by Pippa Cleary",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=4pojhTEhMa4",
+      "img": "assets/gallery-3.jpg"
+    },
+    {
+      "id": "once-on-this-island",
+      "title": "Once On This Island",
+      "sub": "in Concert",
+      "venue": "Theatre Royal Drury Lane (2026)",
+      "credits": [
+        "Music by Stephen Flaherty",
+        "Book and lyrics by Lynn Ahrens",
+        "New orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=-QDXHFgeSF0",
+      "img": "assets/theatre/once-on-this-island.jpg"
+    },
+    {
+      "id": "pippin",
+      "title": "Pippin",
+      "sub": "50th Anniversary Concert",
+      "venue": "Theatre Royal Drury Lane (2024)",
+      "credits": [
+        "Music and lyrics by Stephen Schwartz",
+        "Expanded orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=0fkyx6wmoZ0&t=9s",
+      "img": "assets/theatre/pippin.webp"
+    },
+    {
+      "id": "honeymoon-in-vegas",
+      "title": "Honeymoon In Vegas",
+      "sub": "The Musical in Concert",
+      "venue": "London Palladium (2017)",
+      "credits": [
+        "Music and lyrics by Jason Robert Brown",
+        "Expanded orchestrations by Simon Nathan"
+      ],
+      "img": "assets/theatre/honeymoon-in-vegas.jpg"
+    },
+    {
+      "id": "treason",
+      "title": "Treason",
+      "sub": "The Musical in Concert",
+      "venue": "Theatre Royal Drury Lane (2022)",
+      "credits": [
+        "Music and lyrics by Ricky Allan",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=gx4xrhJeLtM",
+      "img": "assets/theatre/treason.jpg"
+    },
+    {
+      "id": "girlfriends",
+      "title": "Girlfriends",
+      "sub": "in Concert",
+      "venue": "Bishopsgate Institute (2018)",
+      "credits": [
+        "Music and lyrics by Howard Goodall",
+        "Orchestrations by Simon Nathan"
+      ],
+      "img": "assets/theatre/girlfriends.jpg"
+    },
+    {
+      "id": "king",
+      "title": "King",
+      "sub": "in Concert",
+      "venue": "Hackney Empire (2018)",
+      "credits": [
+        "Music and lyrics Martin Smith",
+        "New orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=gTF9uRZFeDE",
+      "img": "assets/theatre/king.jpg"
+    },
+    {
+      "id": "zoologicalsociety",
+      "title": "#Zoologicalsociety",
+      "venue": "Royal & Derngate (2020)",
+      "credits": [
+        "Music and lyrics Vikki Stone",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=saaAbh4Gxb4",
+      "img": "assets/theatre/zoologicalsociety-web.jpg"
+    },
+    {
+      "id": "crime-and-punishment",
+      "title": "Crime And Punishment",
+      "venue": "American Ballet Theatre (2024)",
+      "credits": [
+        "Music by [Isobel Waller-Bridge](https://www.abt.org/people/isobel-waller-bridge/?type=archive)",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=_8UwbLG4PXU",
+      "img": "assets/theatre/crime-and-punishment-web.jpg"
+    }
+  ],
+  "screen": [
+    {
+      "id": "emilia-perez",
+      "title": "Emilia Pérez",
+      "sub": "Netflix",
+      "credits": [
+        "Music by Clément Ducol & Camille Dalmais",
+        "Orchestrations by Simon Nathan"
+      ],
+      "note": "\"El Mal\" won the 2025 Academy Award and Golden Globe for Best Original Song",
+      "yt": "https://www.youtube.com/watch?v=vM-voEepRyI",
+      "img": "assets/screen/emilia-perez.jpg"
+    },
+    {
+      "id": "trap",
+      "title": "Trap",
+      "sub": "Warner Bros.",
+      "credits": [
+        "Music by Herdís Stefánsdóttir",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=hJiPAJKjUVg",
+      "img": "assets/screen/trap.jpg"
+    },
+    {
+      "id": "the-count-of-monte-cristo",
+      "title": "The Count of Monte Cristo",
+      "sub": "Pathé",
+      "credits": [
+        "Music by Jérôme Rebotier",
+        "Orchestrations by Simon Nathan"
+      ],
+      "note": "The Count of Monte Cristo was the highest-budget French film of 2024, and had its world premiere at the 77th Cannes Film Festival",
+      "yt": "https://www.youtube.com/watch?v=8Q6y1waxlTY",
+      "img": "assets/screen/the-count-of-monte-cristo-web.jpg"
+    },
+    {
+      "id": "miraculous",
+      "title": "Miraculous: Ladybug & Cat Noir, The Movie",
+      "sub": "SND/Netflix",
+      "credits": [
+        "Music by Jeremy Zag",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=3fzFvZToh8o",
+      "img": "assets/screen/miraculous.jpg"
+    },
+    {
+      "id": "kaamelott",
+      "title": "Kaamelott - Deuxième Volet, pt.1 & pt.2",
+      "sub": "SND",
+      "credits": [
+        "Music by Alexandre Astier",
+        "Orchestrations by Simon Nathan"
+      ],
+      "note": "Recorded with the Orchestre National de Lyon",
+      "yt": "https://www.youtube.com/watch?v=RqFytkq8PMY",
+      "img": "assets/screen/kaamelott-web.jpg"
+    },
+    {
+      "id": "asterix",
+      "title": "Asterix: The Kingdom of Nubia",
+      "sub": "SND",
+      "credits": [
+        "Music by Romain Trouillet",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=OoObyOm2rfI",
+      "img": "assets/screen/asterix-web.jpg"
+    },
+    {
+      "id": "finding-ohana",
+      "title": "Finding 'Ohana",
+      "sub": "Netflix",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=FTqLUEpWqEc",
+      "img": "assets/screen/finding-ohana.jpg"
+    },
+    {
+      "id": "8-bit-christmas",
+      "title": "8-Bit Christmas",
+      "sub": "HBO",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=CPIcAkLBV-U",
+      "img": "assets/screen/8-bit-christmas.jpg"
+    },
+    {
+      "id": "four-kids-and-it",
+      "title": "Four Kids and It",
+      "sub": "Sky Cinema",
+      "credits": [
+        "Music by Anne Nikitin",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=ZK1tAw4uaQE",
+      "img": "assets/screen/four-kids-and-it-web.jpg"
+    },
+    {
+      "id": "visions",
+      "title": "Visions",
+      "sub": "SND",
+      "credits": [
+        "Music by Philippe Rombi",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=od-F6W_f4D4",
+      "img": "assets/screen/visions-web.jpg"
+    },
+    {
+      "id": "shadow-and-bone",
+      "title": "Shadow and Bone",
+      "sub": "Netflix",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=b1WHQTbJ7vE",
+      "img": "assets/screen/shadow-and-bone-web.jpg"
+    },
+    {
+      "id": "prince-andrew",
+      "title": "Prince Andrew: The Musical",
+      "sub": "Channel 4",
+      "credits": [
+        "Music and lyrics by Kieran Hodgson, Freddie Tapner & Pippa Cleary",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=SePqlPRrJ7s",
+      "img": "assets/screen/prince-andrew-web.jpg"
+    },
+    {
+      "id": "blacktalon",
+      "title": "Blacktalon",
+      "sub": "Warhammer TV",
+      "credits": [
+        "Music by Jonathan Hartman",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=sqE4XZQxcm4",
+      "img": "assets/screen/blacktalon.jpg"
+    },
+    {
+      "id": "star-wars-galaxys-edge",
+      "title": "Star Wars: Tales From The Galaxy's Edge",
+      "sub": "Disney Interactive/ILMxLab",
+      "credits": [
+        "Music by Joseph Trapanese",
+        "Orchestrations by Simon Nathan"
+      ],
+      "img": "assets/screen/star-wars-web.jpg",
+      "yt": "https://www.youtube.com/watch?v=k68dIkUCymI"
+    },
+    {
+      "id": "team-gb-homecoming",
+      "title": "Team GB Homecoming",
+      "venue": "AO Arena, 2024",
+      "credits": [
+        "Performed by Nia Choir - An entirely female and non-binary community choir from Liverpool",
+        "Vocal Arrangements by Simon Nathan"
+      ]
+    },
+    {
+      "id": "british-arrows",
+      "title": "British Arrows",
+      "sub": "Advertising Awards",
+      "venue": "A medley of the music from the best of British adverts, performed at Grosvenor House Hotel",
+      "credits": [
+        "Arranged and Orchestrated by Simon Nathan"
+      ],
+      "img": "assets/screen/british-arrows-web.jpg",
+      "vimeo": "https://player.vimeo.com/video/1233056058"
+    },
+    {
+      "id": "national-lottery-nye",
+      "title": "National Lottery New Year's Eve Bash",
+      "venue": "Several pieces performed by multiple choirs over various years including the Liverpool Lighthouse Choir and 100 Voice United (a choir made up of both British and Ukrainian children)",
+      "credits": [
+        "Vocal Arrangements by Simon Nathan"
+      ]
+    },
+    {
+      "id": "daphne-sounds-expensive",
+      "title": "Daphne: Sounds Expensive",
+      "sub": "BBC",
+      "venue": "Radio 4 comedy",
+      "credits": [
+        "Music by Jeff Carpenter",
+        "Arranged and Orchestrated by Simon Nathan"
+      ],
+      "img": "assets/screen/daphne-web.jpg"
+    },
+    {
+      "id": "argos-advert",
+      "title": "Argos Advert",
+      "sub": "WKD Advertising",
+      "venue": "Christmas Fool, 2018",
+      "credits": [
+        "An arrangement of Verdi’s Rigoletto",
+        "Arranged by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=2GYCmwuWBp0"
+    },
+    {
+      "id": "coinbase-advert",
+      "title": "Coinbase Advert",
+      "credits": [
+        "Music by Pippa Cleary",
+        "Arranged by Simon Nathan",
+        "Produced by Auburn Jam"
+      ],
+      "yt": "https://www.youtube.com/watch?v=l0bmJlrhRg4&t=4s",
+      "img": "assets/screen/coinbase-web.jpg"
+    },
+    {
+      "id": "finish-advert",
+      "title": "Finish Advert",
+      "credits": [
+        "Music by Pippa Cleary",
+        "Arranged by Simon Nathan",
+        "Produced by Auburn Jam"
+      ],
+      "yt": "https://www.youtube.com/watch?v=RL6Wiiq7sg8"
+    }
+  ],
+  "concerts": [
+    {
+      "id": "paddington",
+      "title": "Paddington the Musical",
+      "sub": "Royal Variety Performance",
+      "venue": "Royal Variety Performance, Royal Albert Hall (2025)",
+      "credits": [
+        "Music and lyrics by Tom Fletcher",
+        "Orchestrations by Simon Nathan"
+      ],
+      "yt": "https://www.youtube.com/watch?v=qB13h724-a8",
+      "img": "assets/theatre/paddington.jpg",
+      "desc": "Royal Variety Performance, Royal Albert Hall (2025). Music and lyrics by Tom Fletcher. Orchestrations by Simon Nathan."
+    },
+    {
+      "id": "john-wilson-orchestra",
+      "title": "John Wilson Orchestra/Sinfonia of London",
+      "desc": "Simon has worked on many projects with both the John Wilson Orchestra and Sinfonia of London, such as arrangements for tours and proms, as well as reconstructions by ear of film scores, including music lost in 1965 MGM vault fire.",
+      "yt": "https://www.youtube.com/watch?v=nqlwvArriLk"
+    },
+    {
+      "id": "lucerne-festival-orchestra",
+      "title": "Lucerne Festival Orchestra",
+      "desc": "In celebration of their outgoing Festival Director, Michael Haefliger, after 26 years with the Orchestra, Simon created an arrangement that included huge variety of music from Boulez to Mozart to swiss folk song to football chants!"
+    },
+    {
+      "id": "dso-berlin",
+      "title": "Deutsches Symphonie-Orchester Berlin",
+      "desc": "Since 2022, Simon has arranged several new pieces every year for their fantastic circus tent concert! Each piece features and highlights different orchestral instruments to accompany the circus performers."
+    },
+    {
+      "id": "bbc-symphony-orchestra",
+      "title": "BBC Symphony Orchestra",
+      "desc": "Simon has worked on 3 concerts, including 4 or 5 arrangements where the orchestra collaborates with great writers to perform pieces inspired by stories.",
+      "yt": "https://www.youtube.com/watch?v=XbZ4AWEMqpU"
+    },
+    {
+      "id": "bbc-concert-orchestra",
+      "title": "BBC Concert Orchestra",
+      "desc": "An Alan Menken concert in conjunction with the BBC Singers. Simon worked on scaling up orchestrations, including songs from the Hunchback of Notre Dame and a song written by Menken called Star Spangled Man for Captain America."
+    },
+    {
+      "id": "bbc-now",
+      "title": "BBC National Orchestra of Wales",
+      "desc": "Friday Night is Music Night - arrangement of Waving Through a Window."
+    },
+    {
+      "id": "halle",
+      "title": "Hallé Orchestra",
+      "desc": "Friday Night is Music Night - arrangement of Waving Through a Window."
+    },
+    {
+      "id": "mulhouse",
+      "title": "Mulhouse Symphony Orchestra",
+      "desc": "Live to Picture performance of Laurel and Hardy. This was an hour-long composition by Fabien Cali and arranged by Simon to accompany the film."
+    },
+    {
+      "id": "aalborg",
+      "title": "Aalborg Symphony Orchestra",
+      "desc": "Edition of a previously unperformed piece of music by Pavel Haas - a Jewish composer who was tragically taken to a concentration camp before being able to complete his symphony. Simon was an editor of the piece and his version was published by Boosey and Hawkes."
+    },
+    {
+      "id": "lmto",
+      "title": "London Musical Theatre Orchestra",
+      "desc": "Simon has worked on many LMTO concerts from A Christmas Carol and Honeymoon in Vegas, to Magic at the Musicals at The Royal Albert Hall."
+    },
+    {
+      "id": "lgmc",
+      "title": "London Gay Men's Chorus",
+      "desc": "Simon has created around 200 arrangements for the Gay Men’s Chorus from 2015-2022."
+    },
+    {
+      "id": "beanlandia",
+      "title": "Beanlandia - Rowan Atkinson Suite",
+      "desc": "A medley of music written by Howard Goodall for Rowan Atkinson’s 60th birthday, which was arranged and orchestrated by Simon. It is published by Faber."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="height: {{ spacer }};"></div>
+<header ref="{{ hRef }}" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 16px 48px; padding: {{ padY }} {{ padR }} {{ padY }} {{ padL }}; background: {{ bar }}; backdrop-filter: {{ blur }}; -webkit-backdrop-filter: {{ blur }}; color: {{ fg }}; font-family: Inter, sans-serif; transition: padding .35s ease, background .35s ease;">
+  <a href="Simon%20Nathan%20Home.dc.html" style="display: flex; flex-direction: column; gap: clamp(6px, .6vw, 12px); color: {{ fg }};">
+    <span style="font-family: 'Arizona Flare', serif; font-weight: 400; font-size: {{ logoSize }}; line-height: .853; white-space: nowrap; transition: font-size .35s ease;">SIMON NATHAN</span>
+    <span style="font-weight: 400; font-size: {{ subSize }}; line-height: 1.2; letter-spacing: .01em; transition: font-size .35s ease;">Orchestrator, Arranger, MIDI Mockup Artist</span>
+  </a>
+  <nav style="display: flex; flex-wrap: wrap; gap: clamp(12px, 1.2vw, 20px) clamp(18px, 2.2vw, 40px); padding-top: clamp(4px, .6vw, 12px); font-weight: 500; font-size: clamp(14px, 1vw, 16px); line-height: 1;">
+    <a href="Listen.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dListen }};">Listen</a>
+    <a href="Theatre.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dTheatre }};">Theatre</a>
+    <a href="Screen.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dScreen }};">Screen</a>
+    <a href="Concerts.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dConcerts }};">Concerts</a>
+    <a href="Contact.dc.html" style="color: {{ fg }}; text-underline-offset: 6px; text-decoration: {{ dContact }};">Contact</a>
+  </nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 200}, &quot;current&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;listen&quot;, &quot;theatre&quot;, &quot;screen&quot;, &quot;concerts&quot;, &quot;contact&quot;, &quot;&quot;], &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { s: false, h: 0 };
+  hRef = React.createRef();
+  componentDidMount() {
+    this.onScroll = () => { const s = window.scrollY > 30; if (s !== this.state.s) this.setState({ s }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    this.ro = new ResizeObserver(() => { const el = this.hRef.current; if (el && !this.state.s) this.setState({ h: el.offsetHeight }); });
+    this.hRef.current && this.ro.observe(this.hRef.current);
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); this.ro && this.ro.disconnect(); }
+  renderVals() {
+    const light = this.props.light ?? false;
+    const fg = light ? '#000' : '#fff';
+    const c = this.props.current || '';
+    const d = k => (k === c ? 'underline' : 'none');
+    const home = this.props.home ?? false;
+    const s = this.state.s;
+    const inset = this.props.inset;
+    const big = home && !s;
+    return {
+      fg, hRef: this.hRef,
+      spacer: (home || this.props.overlay) ? '0px' : (this.state.h ? this.state.h + 'px' : 'clamp(110px, 9vw, 170px)'),
+      bar: s ? (light ? 'rgba(255,255,255,.9)' : 'rgba(0,0,0,.82)') : 'transparent',
+      blur: s ? 'blur(14px)' : 'none',
+      padY: s ? 'clamp(12px, 1.1vw, 20px)' : 'clamp(20px, 2.35vw, 49px)',
+      padL: inset || 'clamp(20px, 4.8vw, 76.8px)', padR: inset || 'clamp(20px, 4.8vw, 76.8px)',
+      logoSize: big ? 'clamp(40px, 5.97vw, 95.5px)' : (s ? 'clamp(24px, 2.2vw, 36px)' : 'clamp(28px, 2.985vw, 47.8px)'),
+      subSize: big ? 'clamp(14px, 1.2vw, 19px)' : 'clamp(12px, .85vw, 14px)',
+      dListen: d('listen'), dTheatre: d('theatre'), dScreen: d('screen'), dConcerts: d('concerts'), dContact: d('contact')
+    };
+  }
+}
+</script>
+</body>
+</html>
